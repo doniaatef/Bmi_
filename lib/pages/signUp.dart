@@ -2,6 +2,8 @@
 import 'package:bmi/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+
+import 'bmi.dart';
 class signup extends StatelessWidget {
 GlobalKey<FormState> formstate = GlobalKey();
 GlobalKey<FormState> formstate2 = GlobalKey();
@@ -69,7 +71,7 @@ GlobalKey<FormState> formstate2 = GlobalKey();
                     if(formstate.currentState!.validate() && formstate2.currentState!.validate()) {
                       Navigator.push(context, MaterialPageRoute(builder: (
                           context) {
-                        return bmi();
+                        return Bmi();
                       },));
                     }
                   }, icon: Icon(Icons.login,

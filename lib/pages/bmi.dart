@@ -7,6 +7,7 @@ class Bmi extends StatefulWidget {
 }
 
 class _BmiState extends State<Bmi> {
+  String? gender ;
   double currenValue = 80.0;
   int weight = 0;
   int age = 0;
@@ -36,12 +37,22 @@ class _BmiState extends State<Bmi> {
                 geder1(
                   text: 'Female',
                   icon: Icons.female_outlined,
-                  color: Colors.grey,
+                  color: gender=='Female'? Colors.blueGrey : Colors.grey,
+                  onpressed: (){
+                    setState(() {
+                      gender = 'Female';
+                    });
+                  },
                 ),
                 geder1(
                   text: 'Male',
                   icon: Icons.male_outlined,
-                  color: Colors.grey,
+                  color: gender=='male'? Colors.blueGrey : Colors.grey,
+                  onpressed: (){
+                    setState(() {
+                      gender = 'male';
+                    });
+                  },
                 ),
               ],
             ),

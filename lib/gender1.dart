@@ -3,11 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class geder1 extends StatelessWidget {
+  Function onpressed;
  final IconData icon;
   final String text;
  final Color color;
  final Color? color2;
   geder1({
+    required this.onpressed,
     required this.text,
     required this.icon,
      this.color = Colors.grey,
@@ -16,8 +18,8 @@ class geder1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-
+      onTap: (){
+        onpressed();
       },
       child: Padding(
         padding:
